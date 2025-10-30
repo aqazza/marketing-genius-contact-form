@@ -1,24 +1,23 @@
-import type { ReactNode } from "react"
-import { Geist } from 'next/font/google'
-import "./globals.css"
-
-// Configure Geist font
-const geist = Geist({
-  subsets: ['latin'],
-})
+import type { ReactNode } from "react";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import "./globals.css";
 
 export default function RootLayout({
   children,
 }: {
-  children: ReactNode
+  children: ReactNode;
 }) {
   return (
-    <html lang="en" className={geist.className}>
+    <html
+      lang="en"
+      className={`${GeistSans.variable} ${GeistMono.variable}`}
+    >
       <body>{children}</body>
     </html>
-  )
+  );
 }
 
 export const metadata = {
-      generator: 'v0.app'
-    };
+  generator: "v0.app",
+};

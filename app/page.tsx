@@ -7,7 +7,7 @@ export default function ContactPage() {
       <div className="w-full max-w-3xl flex-1 flex flex-col justify-center">
         <div className="text-center mb-12">
           <h2 className="text-5xl font-light tracking-wide text-white mb-4">Website coming soon</h2>
-          <p className="text-xl text-gray-300 text-balance max-w-2xl mx-auto">
+          <p className="text-s text-gray-300 text-balance max-w-2xl mx-auto">
             Custom signs, banners, vehicle wraps & large-format printing. Fast turnarounds, fair pricing.
           </p>
         </div>
@@ -15,12 +15,12 @@ export default function ContactPage() {
       </div>
       <footer className="w-full text-center py-6 text-gray-400">
         <a
-          href="https://themarketinggenius.com"
+          href="https://themarketinggeniusco.com"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-emerald-400 transition-colors"
         >
-          TheMarketingGenius.com
+          TheMarketingGeniusCo.com
         </a>
       </footer>
       <Toaster />
