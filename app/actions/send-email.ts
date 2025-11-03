@@ -82,7 +82,7 @@ export async function sendEmail(formData: FormData) {
 
     await resend.emails.send({
       from: "TheMarketingGenius <onboarding@resend.dev>",
-      to: "TheMarketingGenius@gmail.com",
+      to: "anasqazza1@gmail.com",
       subject: "New Quote Request",
       html: businessEmailHtml,
       text: `
