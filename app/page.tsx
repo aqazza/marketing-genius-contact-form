@@ -15,12 +15,12 @@ export default function ContactPage() {
       </div>
       <footer className="w-full text-center py-6 text-gray-400">
         <a
-          href="https://themarketinggeniusco.com"
+          href="https://marketinggeenius.com"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-emerald-400 transition-colors"
         >
-          TheMarketingGeniusCo.com
+          MarketingGeenius.com
         </a>
       </footer>
       <Toaster />

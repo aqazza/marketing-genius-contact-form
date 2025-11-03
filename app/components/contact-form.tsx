@@ -1,14 +1,19 @@
 "use client"
+import { useState } from "react"
 import Image from "next/image"
 import { SubmitButton } from "./submit-button"
 import { toast } from "@/components/ui/use-toast"
 import { sendEmail } from "../actions/send-email"
+import { CheckCircle2 } from "lucide-react"
 
 export function ContactForm() {
+  const [isSubmitted, setIsSubmitted] = useState(false)
+
   async function handleSubmit(formData: FormData) {
     const result = await sendEmail(formData)
 
     if (result.success) {
+      setIsSubmitted(true)
       toast({
         title: "Success",
         description: result.success,
@@ -20,6 +25,25 @@ export function ContactForm() {
         description: result.error,
       })
     }
+  }
+
+  if (isSubmitted) {
+    return (
+      <div className="space-y-8 text-center py-12">
+        <div className="flex justify-center">
+          <CheckCircle2 className="w-20 h-20 text-green-500" />
+        </div>
+        <div className="space-y-4">
+          <h2 className="text-3xl font-semibold text-gray-100">Thank You!</h2>
+          <p className="text-xl text-gray-400 max-w-md mx-auto">
+            We&apos;ve received your quote request and will get back to you within 1 business day.
+          </p>
+          <p className="text-lg text-gray-500">
+            Check your email for confirmation.
+          </p>
+        </div>
+      </div>
+    )
   }
 
   return (
